@@ -6,13 +6,27 @@
 <meta name="theme-color" content="#100d16">
 <meta name="description" content="Ayhan Ağayev’s backend development portfolio. Selected work in .NET, Go, and real-time systems.">
 <title>Ayhan Ağayev — Backend Developer</title>
-<link rel="stylesheet" href="portfolio.css?v=10">
-<script src="translations.js?v=3" defer></script>
-<script src="portfolio.js?v=5" defer></script>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ayhan Ağayev — Backend Developer">
+<meta property="og:description" content="Backend development portfolio. Selected work in .NET, Go, and real-time systems.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="portfolio.css?v=11">
+<script>
+// Hide the page until nanobots.js takes over; give up after 3s so content can never stay hidden.
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.documentElement.classList.add('nano-boot');
+  setTimeout(() => document.documentElement.classList.remove('nano-boot'), 3000);
+}
+</script>
+<script src="translations.js?v=4" defer></script>
+<script src="portfolio.js?v=6" defer></script>
 <script src="strings.js?v=3" defer></script>
+<script src="nanobots.js?v=9" defer></script>
 </head>
 <body id="top">
 <canvas id="string-field" aria-hidden="true"></canvas>
+<canvas id="nano-field" aria-hidden="true"></canvas>
 <a class="skip" href="#work">Skip to projects</a>
 <header class="mast wrap">
   <a class="brand" href="#top">Ayhan Ağayev</a>
@@ -44,7 +58,7 @@
       <article id="project" class="case-copy" aria-live="polite">
         <p class="label" id="case-type">01 / UNIVERSITY CLUB PLATFORM</p>
         <h3 id="case-title">BFrost</h3>
-        <img id="case-screenshot" class="case-screenshot" src="bfrost.jpg" alt="BFrost homepage screenshot">
+        <img id="case-screenshot" class="case-screenshot" src="bfrost.jpg" width="1280" height="720" alt="BFrost homepage screenshot">
         <p id="case-description">A campus platform where students can discover clubs by interest, join communities, and register for events.</p>
         <ul id="case-points" class="points"><li>Supports open membership and organizer approval for private clubs.</li><li>Keeps club discussions, polls, messages, and shared wikis in one place.</li></ul>
         <ul class="tags" id="case-tags"><li>Club discovery</li><li>Event registration</li><li>Community</li></ul>

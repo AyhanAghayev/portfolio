@@ -3,10 +3,10 @@
 const pageTranslations = [
   ['.skip', 'Layihələrə keç', 'Перейти к проектам'],
   ['.mast-label', 'Portfel', 'Портфолио'],
-  ['.mast-link', 'Əlaqə ↘', 'Контакты ↘'],
+  ['.mast-link', 'Əlaqə', 'Контакты'],
   ['.role', 'Backend proqramçısı', 'Бэкенд-разработчик'],
   ['.lead', 'Sosial tətbiqlər və real vaxt xidmətləri üçün backend hazırlayıram. Layihələrimə .NET sosial platforması və dinləyicilər arasında musiqi səsləndirilməsini sinxronlaşdıran Go serveri daxildir.', 'Разрабатываю серверную часть социальных приложений и сервисов реального времени. Среди моих проектов — социальная платформа на .NET и сервер на Go, который синхронизирует музыку у слушателей.'],
-  ['.actions .primary', 'Layihələrə bax ↘', 'Посмотреть проекты ↘'],
+  ['.actions .primary', 'Layihələrə bax', 'Посмотреть проекты'],
   ['.actions .secondary', 'Əlaqə saxla', 'Связаться'],
   ['#work .section-head .label', '01 / LAYİHƏLƏR', '01 / ПРОЕКТЫ'],
   ['#work-title', 'Seçilmiş layihələr.', 'Избранные проекты.'],

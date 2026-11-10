@@ -112,7 +112,8 @@ function setLanguage(value) {
     node.innerHTML = en;
     if (locale === 'en') continue;
     const copy = translation[locale];
-    if (node.matches('.contact-links span')) node.firstChild.textContent = copy + ' ';
+    // Keep decorative arrows and sub-labels; only swap the leading text.
+    if (node.querySelector(':scope > span[aria-hidden], :scope > small')) node.firstChild.textContent = copy + ' ';
     else node.textContent = copy;
   }
   buttons.forEach(button => {
@@ -120,11 +121,15 @@ function setLanguage(value) {
   });
   renderProject();
 }
+// Storage can throw when blocked (privacy settings, some embedded views).
+function savedLanguage() {
+  try { return localStorage.getItem('portfolio-language'); } catch { return null; }
+}
 language.addEventListener('change', () => {
   setLanguage(language.value);
-  localStorage.setItem('portfolio-language', locale);
+  try { localStorage.setItem('portfolio-language', locale); } catch {}
 });
-setLanguage(localStorage.getItem('portfolio-language'));
+setLanguage(savedLanguage());
 moveProjectHighlight();
 projectIndex.classList.add('has-highlight');
 const indexSize = new ResizeObserver(moveProjectHighlight);
